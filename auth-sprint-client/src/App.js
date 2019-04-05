@@ -21,6 +21,8 @@ class App extends Component {
             <NavLink to="/register">Sign-Up</NavLink>
             &nbsp;|&nbsp;
             <NavLink to="/jokes">Jokes</NavLink>
+            &nbsp;|&nbsp;
+            <button onClick={this.logout}>Logout</button>
           </nav>
         </header>
         <main>
@@ -57,6 +59,12 @@ class App extends Component {
       </div>
     );
   }
+
+  logout = event => {
+    localStorage.removeItem("token");
+
+    this.props.history.push("/login");
+  };
 }
 
 export default withRouter(App);

@@ -4,8 +4,7 @@ import axios from "axios";
 class Signup extends React.Component {
   state = {
     username: "",
-    password: "",
-    department: ""
+    password: ""
   };
 
   render() {
@@ -61,7 +60,7 @@ class Signup extends React.Component {
       .then(res => {
         localStorage.setItem("token", res.data.token);
 
-        this.props.history.push('/users');
+        this.props.history.push('/jokes');
       })
       .catch(error => console.error(error));
   };
