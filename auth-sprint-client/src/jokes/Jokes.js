@@ -25,7 +25,7 @@ class Jokes extends React.Component {
     }
 
     componentDidMount() {
-        const endpoint = 'http://localhost:3300/api/jokes/';
+        const endpoint = 'http://localhost:3300/api/jokes';
         const token = localStorage.getItem('token');
 
         const reqOptions = {
@@ -38,7 +38,7 @@ class Jokes extends React.Component {
             .get(endpoint, reqOptions)
             .then(res => {
                 console.log(res);
-                this.setState({ users: res.data });
+                this.setState({ jokes: res.data });
             })
             .catch(error => {
                 console.log(error);
