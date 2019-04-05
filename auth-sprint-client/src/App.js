@@ -36,7 +36,7 @@ class App extends Component {
             path="/login"
             render={props => {
               console.log(props);
-              return <Login {...props} />;
+              return <Signin {...props} />;
             }}
           />
           <Route
