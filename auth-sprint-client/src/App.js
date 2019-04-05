@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-
+import { Route, NavLink, withRouter } from 'react-router-dom';
 
 import './App.css';
+import Home from './home/Home';
 import Signin from './signin/Signin';
 import Signup from './signup/Signup';
 import Jokes from './jokes/Jokes';
@@ -58,4 +59,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
